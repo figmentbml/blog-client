@@ -1,0 +1,11 @@
+posts template
+
+<aside>
+  {{#each post in model}}
+  {{post.title}}
+  {{/each}}
+</aside>
+
+<main>
+  {{outlet}}
+</main>
