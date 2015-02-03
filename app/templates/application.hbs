@@ -1,9 +1,12 @@
-<header>
-  <h2 id="title">Welcome to the Blogiest Blog</h2>
+<header class="welcome">
+  <h1>Welcome to the Blogiest Blog</h1>
 </header>
 
 <nav>
-  {{#link-to 'posts'}}Posts{{/link-to}}
+  <h3>
+    {{#link-to 'posts'}}Posts{{/link-to}}
+    {{#link-to 'posts.new'}}New Post{{/link-to}}
+  </h3>
 </nav>
 
 {{outlet}}

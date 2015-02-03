@@ -1,7 +1,13 @@
-Editing Post
+<h2>Edit "{{title}}"</h2>
 
-{{textarea value=title}}
-{{textarea value=body}}
+<div class="input-blog">
+  <header>
+    {{textarea placeholder="title" value=title}}
+  </header>
+  <body>
+    {{textarea placeholder="body" value=body}}
+  </body>
+</div>
 
 <button {{action 'savePost' this}}>Save</button>
-{{#link-to 'posts'}}Cancel{{/link-to}}
+<button>{{#link-to 'posts'}}Cancel{{/link-to}}</button>

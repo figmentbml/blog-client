@@ -1,8 +1,9 @@
-New Post!
+<h2>Add a New Post!</h2>
 
-
-{{textarea placeholder="title" value=titleCopy}}
-{{textarea placeholder="body" value=bodyCopy}}
+<div class="input-blog">
+  {{textarea placeholder="title" value=titleCopy}}
+  {{textarea placeholder="body" value=bodyCopy rows=20}}
+</div>
 
 <button {{action 'newPost'}}>Save</button>
-{{#link-to 'posts'}}Cancel{{/link-to}}
+<button>{{#link-to 'posts'}}Cancel{{/link-to}}</button>

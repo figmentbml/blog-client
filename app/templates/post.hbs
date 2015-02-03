@@ -1,8 +1,10 @@
-post template
-{{outlet}}
+<div class="post-edit">
+  {{outlet}}
+</div>
 
-<h2>{{title}}</h2>
-<p>{{body}}</p>
-
-{{#link-to 'post.edit' this}}Edit Post{{/link-to}}
-<button {{action 'deletePost' this}}>Delete Post</button>
+<div class="post-show">
+  <h2 class="title">{{title}}</h2>
+  <p>{{body}}</p>
+  <button>{{#link-to 'post.edit' this}}Edit Post{{/link-to}}</button>
+  <button {{action 'deletePost' this}}>Delete Post</button>
+</div>
