@@ -1,7 +1,8 @@
-I'm the posts/new
+New Post!
 
 
 {{textarea placeholder="title" value=titleCopy}}
 {{textarea placeholder="body" value=bodyCopy}}
 
 <button {{action 'newPost'}}>Save</button>
+{{#link-to 'posts'}}Cancel{{/link-to}}

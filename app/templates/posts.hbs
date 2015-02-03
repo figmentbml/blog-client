@@ -1,8 +1,9 @@
 posts template
 
 <aside>
+  <h2>Posts</h2>
   {{#each post in model}}
-  {{post.title}}
+    {{#link-to 'post' post}}{{post.title}}{{/link-to}}
   {{/each}}
 </aside>
 

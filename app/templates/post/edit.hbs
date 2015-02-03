@@ -1,1 +1,7 @@
-i'm the post/edit
+Editing Post
+
+{{textarea value=title}}
+{{textarea value=body}}
+
+<button {{action 'savePost' this}}>Save</button>
+{{#link-to 'posts'}}Cancel{{/link-to}}

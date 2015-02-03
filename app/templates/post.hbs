@@ -3,3 +3,6 @@ post template
 
 <h2>{{title}}</h2>
 <p>{{body}}</p>
+
+{{#link-to 'post.edit' this}}Edit Post{{/link-to}}
+<button {{action 'deletePost' this}}>Delete Post</button>
