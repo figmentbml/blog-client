@@ -7,10 +7,11 @@ var Router = Ember.Router.extend({
 
 Router.map(function() {
   this.route("posts", function(){
+    this.route('search');
     this.route('new', { path: 'new'});
     this.resource('post', { path: '/:post_id'}, function() {
       this.route('edit', { path: '/edit'});
-    })
+    });
   });
 });
 

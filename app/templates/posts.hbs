@@ -1,6 +1,7 @@
 <div class="posts-wrapper">
   <aside>
     <h2>Posts</h2>
+    {{input type="text" class="search" placeholder="Search" value=search action="queryPost"}}
     {{#each post in model}}
       <h4>{{#link-to 'post' post}}{{post.title}}{{/link-to}}</h4>
     {{/each}}
@@ -8,11 +9,5 @@
 
   <main>
     {{outlet}}
-    {{#each post in model}}
-    <h3>{{#link-to 'post' post}}{{post.title}}{{/link-to}}</h3>
-    <p>
-      {{post.body}}
-    </p>
-    {{/each}}
   </main>
 </div>
