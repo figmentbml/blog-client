@@ -1,11 +1,14 @@
 <div class="search-area">
   <p>
-    The user searched for..  {{term}}
+    The user searched for.. {{term}}
   </p>
 
   <div class="search-result">
-    {{#each post in model}}
+    {{#each post in results}}
       <h2>{{post.title}}</h2>
+      <p>
+        {{post.body}}
+      </p>
     {{else}}
       No search results
     {{/each}}
