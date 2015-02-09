@@ -4,6 +4,7 @@
 
 <div class="post-show">
   <h2 class="title">{{title}}</h2>
+  <h4>By : {{user_id}}</h4>
   <p>{{body}}</p>
   <button>{{#link-to 'post.edit' this}}Edit Post{{/link-to}}</button>
   <button {{action 'deletePost' this}}>Delete Post</button>
