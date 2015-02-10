@@ -1,16 +1,17 @@
 
 <div class>
-  <h2 class="title">{{firstName}}</h2>
-  <h4>{{firstName}}'s Posts</h4>
-  {{#each post in posts}}
-    <p>{{#link-to 'post' post}}{{post.title}}{{/link-to}}</p>
-  {{/each}}
+  <h2 class="title">{{firstName}}'s Posts</h2>
+    <ul>
+      {{#each post in posts}}
+        <li>{{#link-to 'post' post}}{{post.title}}{{/link-to}}</li>
+      {{/each}}
+    </ul>
 
-  <h4>{{firstName}}'s Comments</h4>
-  {{#each comment in comments}}
-    <p>
-      {{#link-to 'post' comment.post}}{{comment.post.title}}{{/link-to}}
-    </p>
-    <p>{{comment.body}}</p>
-  {{/each}}
+  <h2 class="title">{{firstName}}'s Comments</h2>
+    <ul>
+      {{#each comment in comments}}
+        <li>{{#link-to 'post' comment.post}}{{comment.post.title}}{{/link-to}}</li>
+          <p class= "quote-body">"{{comment.body}}"</p>
+      {{/each}}
+    </ul>
 </div>

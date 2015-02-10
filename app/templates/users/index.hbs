@@ -1,5 +1,8 @@
 <div class>
   {{#each user in model}}
   <h2 class="title">{{#link-to 'user' user}}{{user.firstName}}{{/link-to}}</h2>
+  <p>
+    {{user.post.title}}
+  </p>
   {{/each}}
 </div>
