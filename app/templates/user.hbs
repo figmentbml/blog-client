@@ -1,16 +1,16 @@
 
 <div class>
-  <h2 class="title">{{first_name}}</h2>
-  <h4>Posts</h4>
-  <p>{{post_ids}}</p>
-  <p>
-    each post title should be a link
-  </p>
+  <h2 class="title">{{firstName}}</h2>
+  <h4>{{firstName}}'s Posts</h4>
+  {{#each post in posts}}
+    <p>{{#link-to 'post' post}}{{post.title}}{{/link-to}}</p>
+  {{/each}}
 
-  <h4>Comments</h4>
-  <p></p>
-  <p>
-    And by each comment it should list the titles of the blog posts they are associated with,
-    along with the comment itself
-  </p>
+  <h4>{{firstName}}'s Comments</h4>
+  {{#each comment in comments}}
+    <p>
+      {{#link-to 'post' comment.post}}{{comment.post.title}}{{/link-to}}
+    </p>
+    <p>{{comment.body}}</p>
+  {{/each}}
 </div>

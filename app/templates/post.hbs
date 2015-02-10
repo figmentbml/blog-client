@@ -4,8 +4,17 @@
 
 <div class="post-show">
   <h2 class="title">{{title}}</h2>
-  <h4>By : {{user_id}}</h4>
+  <h4>By : {{#link-to 'user' user}}{{user.firstName}}{{/link-to}}</h4>
   <p>{{body}}</p>
   <button>{{#link-to 'post.edit' this}}Edit Post{{/link-to}}</button>
   <button {{action 'deletePost' this}}>Delete Post</button>
+</div>
+
+<div class="comments">
+  {{#each comment in comments}}
+  <h3>{{#link-to 'user' comment.user}}{{comment.user.firstName}}{{/link-to}} commented:</h3>
+  <p>
+    "{{comment.body}}"
+  </p>
+  {{/each}}
 </div>
