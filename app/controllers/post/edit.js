@@ -8,6 +8,11 @@ export default Ember.ObjectController.extend({
       post.set('title', title);
       post.save().then(function(){
         this.transitionToRoute('posts');
+        this.flashMessage({
+          content: 'Your post was successfully updated!',
+          duration: 1000,
+          type: 'success',
+        });
       }.bind(this));
     }
   }

@@ -5,7 +5,10 @@ export default Ember.ArrayController.extend({
   actions: {
     deletePost: function(post){
       post.deleteRecord();
-      post.save();
+      post.save().then(function(){
+        this.transitionToRoute('posts');
+        this.flashMessage('success', 'Your post has been deleted!');
+      }.bind(this));
     },
 
     queryPost: function() {

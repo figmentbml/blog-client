@@ -1,7 +1,7 @@
 <div class>
   {{#each post in model}}
-  <h2 class="title">{{#link-to 'post' post}}{{post.title}}{{/link-to}}</h2>
-  <h4>By : {{post.user.firstName}}</h4>
-  <p>{{post.body}}</p>
+    <h2 class="title">{{#link-to 'post' post}}{{post.title}}{{/link-to}}</h2>
+    <h4>By : {{post.user.firstName}}</h4>
+    <p>{{post.body}}</p>
   {{/each}}
 </div>

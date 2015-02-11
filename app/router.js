@@ -11,6 +11,9 @@ Router.map(function() {
     this.route('new', { path: 'new'});
     this.resource('post', { path: '/:post_id'}, function() {
       this.route('edit', { path: '/edit'});
+      this.route('comments', function (){
+        this.route('new', { path: '/new'});
+      });
     });
   });
   this.route("users", function() {
