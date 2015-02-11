@@ -17,7 +17,7 @@ module.exports = function(environment) {
       'default-src': "'none'",
       'script-src': "'self' https://cdn.mxpnl.com", // Allow scripts from https://cdn.mxpnl.com
       'font-src': "'self' http://fonts.gstatic.com",  // Allow fonts to be loaded from http://fonts.gstatic.com
-      'connect-src': "'self' http://localhost:3000",
+      'connect-src': "'self' http://localhost:3000 http://jaswa-blog-api.herokuapp.com/",
       'img-src': "'self'",
       'style-src': "'self' 'unsafe-inline' http://fonts.googleapis.com", // Allow inline styles and loaded CSS from http://fonts.googleapis.com
       'media-src': "'self'"
