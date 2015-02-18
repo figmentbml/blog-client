@@ -1,13 +1,14 @@
-<div class="post-edit">
-  {{outlet}}
-</div>
-
 <div class="post-show">
   <h2 class="title">{{title}}</h2>
   <h3>By : {{#link-to 'user' user}}{{user.firstName}}{{/link-to}}</h3>
   <p>{{body}}</p>
   <button>{{#link-to 'post.edit' this}}Edit Post{{/link-to}}</button>
   <button {{action 'deletePost' this}}>Delete Post</button>
+  <button>{{#link-to 'post.comments.new' this}}Add a Comment{{/link-to}}</button>
+</div>
+
+<div class="post-edit">
+  {{outlet}}
 </div>
 
 <div class="comments">

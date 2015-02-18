@@ -13,10 +13,7 @@ export default Ember.ObjectController.extend({
           type: 'success',
         });
       }.bind(this));
-    },
-
-    newComment: function(post){
-      
     }
+
   }
 });

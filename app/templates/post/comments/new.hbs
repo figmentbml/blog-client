@@ -1,0 +1,10 @@
+<h2>Add a New Comment!</h2>
+
+<div class="input-blog">
+  {{textarea placeholder="Comment away..." value=bodyCopy rows=2}}
+  {{input value=user.id}}
+  {{input value=id}}
+</div>
+
+<button {{action 'newComment'}}>Save</button>
+<button>{{#link-to 'post'}}Cancel{{/link-to}}</button>
