@@ -1,0 +1,8 @@
+<h2>Add a User!</h2>
+
+<div class="input-blog">
+  {{input placeholder="What are you called?" value=firstCopy}}
+</div>
+
+<button {{action 'newUser'}}>Save</button>
+<button>{{#link-to 'users'}}Cancel{{/link-to}}</button>
