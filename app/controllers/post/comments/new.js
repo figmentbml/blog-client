@@ -7,23 +7,24 @@ export default Ember.ObjectController.extend({
     newComment: function(){
       var controller = this;
       var body = this.get('bodyCopy');
-      //var user = this.get('user.id');
-      this.store.find('post', this.get('id')).then(function(post){
-        var comment = this.store.createRecord('comment', {
-          body: body,
-          //user: user,
-          post: post
-        });
-        comment.save().then(function(){
-          controller.transitionToRoute('post');
-          controller.flashMessage({
-            content: 'Your comment was saved!',
-            duration: 1000,
-            type: 'success',
+      controller.store.find('post', controller.get('id')).then(function(post){
+        controller.store.find('user', controller.get('userCopy')).then(function(user){
+          var comment = controller.store.createRecord('comment', {
+            body: body,
+            user: user,
+            post: post
+          });
+          comment.save().then(function(){
+            controller.transitionToRoute('post');
+            controller.flashMessage({
+              content: 'Your comment was saved!',
+              duration: 1000,
+              type: 'success',
+            });
           });
         });
-      }.bind(this));
-    this.set('bodyCopy', '');
+      });
+    controller.set('bodyCopy', '');
     }
   }
 

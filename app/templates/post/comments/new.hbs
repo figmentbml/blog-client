@@ -2,8 +2,13 @@
 
 <div class="input-blog">
   {{textarea placeholder="Toss in your two cents..." value=bodyCopy rows=2}}
-  {{input value=user.id}}
-  {{input value=id}}
+  {{view "select"
+    content=users
+    optionValuePath="content.id"
+    optionLabelPath="content.firstName"
+    value=userCopy
+    prompt="Select User"}}
+  {{input type="hidden" value=id}}
 </div>
 
 <button {{action 'newComment'}}>Save</button>
