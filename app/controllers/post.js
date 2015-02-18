@@ -13,6 +13,18 @@ export default Ember.ObjectController.extend({
           type: 'success',
         });
       }.bind(this));
+    },
+
+    deleteComment: function(comment){
+      comment.deleteRecord();
+      comment.save().then(function() {
+        this.transitionToRoute('post');
+        this.flashMessage({
+          content: 'Your comment was deleted!',
+          duration: 1000,
+          type: 'success',
+        });
+      }.bind(this));
     }
 
   }

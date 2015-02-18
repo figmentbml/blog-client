@@ -16,11 +16,14 @@ export default Ember.ObjectController.extend({
         });
         comment.save().then(function(){
           controller.transitionToRoute('post');
+          controller.flashMessage({
+            content: 'Your comment was saved!',
+            duration: 1000,
+            type: 'success',
+          });
         });
       }.bind(this));
-
     this.set('bodyCopy', '');
-
     }
   }
 
