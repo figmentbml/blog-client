@@ -1,6 +1,12 @@
 <h2>Add a New Post!</h2>
 
 <div class="input-blog">
+  {{view "select"
+      content=users
+      optionValuePath="content.id"
+      optionLabelPath="content.firstName"
+      value=userCopy
+      prompt="Select User"}}
   {{textarea placeholder="Title it" value=titleCopy}}
   {{textarea placeholder="Share your lifestory here..." value=bodyCopy rows=20}}
 </div>
